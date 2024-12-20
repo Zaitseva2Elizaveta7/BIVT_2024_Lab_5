@@ -33,10 +33,19 @@ public class Program
     }
     static long Combinations(int n, int k)
     {
-        long f1 = Factorial(n);
-        long f2 = Factorial(k);
-        long f3 = Factorial(n - k);
-        long itog = f1 / (f2 * f3);
+        
+        long itog;
+        if (k == 0 || k > 0 && k == n) itog = 1;
+
+        else if (k > 0 && k < n)
+        {
+            long f1 = Factorial(n);
+            long f2 = Factorial(k);
+            long f3 = Factorial(n - k);
+            itog = f1 / (f2 * f3);
+        }
+        else itog = 0;
+        
         return itog;
     }
     #region Level 1

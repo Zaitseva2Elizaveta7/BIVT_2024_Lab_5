@@ -22,12 +22,10 @@ public class Program
     }
     static int Factorial(int n)
     {
-        int k = 1;
-        int f = k;
-        for (int i = 2; i <= n; i++)
+        int f = 1;
+        for (int i = 1; i <= n; i++)
         {
-            k = k * i;
-            f += k;
+            f = f * i;
         }
         return f;
     }
@@ -1535,6 +1533,7 @@ public class Program
         mc[0] = ToUpperTriangular;
         mc[1] = ToLowerTriangular;
         mc[2] = ToLeftDiagonal;
+        mc[3] = ToRightDiagonal;
 
         
         if (index == 0) matrix = mc[0](matrix);
